@@ -23,8 +23,7 @@ jobs:
       - name: install
         shell: bash
         run: 
-          npm install
-          npm run build
+          npm ci
       - name: run unit test
         shell: bash
         run: npm run test:unit
