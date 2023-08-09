@@ -8,7 +8,6 @@ on:
 
 defaults:
   run:
-    shell: bash
     working-directory: ./hello-world
 
 jobs:
@@ -21,7 +20,11 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 18
+          cache: 'npm'
+          cache-dependency-path: ./hello-world/package-lock.json
       - name: install
+        shell: bash
         run: npm ci
       - name: run unit test
-        run: npm run test:unit
+        shell: bash
+        run: npm run test
