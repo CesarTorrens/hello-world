@@ -6,10 +6,6 @@ on:
       - "./hello-world/**"
       - ".github/workflows/github-actions-demo.yml"
 
-defaults:
-  run:
-    working-directory: ./hello-world
-
 jobs:
   unit-test:
     runs-on: ubuntu-latest
