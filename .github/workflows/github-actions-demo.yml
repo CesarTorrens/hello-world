@@ -19,12 +19,12 @@ jobs:
       - name: Setup Nodejs
         uses: actions/setup-node@v2
         with:
-          node-version: 14
+          node-version: 16
       - name: install
         shell: bash
         run: 
           npm install
           npm run build
-      # - name: run unit test
-      #   shell: bash
-      #   run: npm run test:unit
+      - name: run unit test
+        shell: bash
+        run: npm run test:unit
