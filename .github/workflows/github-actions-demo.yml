@@ -22,7 +22,7 @@ jobs:
           node-version: 14
       - name: install
         shell: bash
-        run: npm install
+        run: npm ci
       - name: run unit test
         shell: bash
-        run: npm run test
+        run: npm run test:unit
