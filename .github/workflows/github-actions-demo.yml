@@ -22,5 +22,4 @@ jobs:
         shell: bash
         run: npm install
       - name: run unit test
-        shell: bash
         run: npm run test:unit
