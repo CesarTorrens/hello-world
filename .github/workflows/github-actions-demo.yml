@@ -18,7 +18,5 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: 'npm'
-          cache-dependency-path: ./hello-world/package-lock.json
-      - run: npm ci
+      - run: npm install
       - run: npm test:unit
