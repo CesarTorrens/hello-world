@@ -1,0 +1,28 @@
+name: HELLO WORLD CI
+#on: [push]
+on:
+  push:
+    paths:
+      - "./hello-world/**"
+      - ".github/workflows/github-actions-demo.yml"
+
+defaults:
+  run:
+    shell: bash
+    working-directory: ./hello-world
+
+jobs:
+  unit-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Nodejs
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18
+          cache: 'npm'
+      - name: install
+        run: npm ci
+      - name: run unit test
+        run: npm run test:unit
