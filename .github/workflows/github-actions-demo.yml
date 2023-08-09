@@ -19,12 +19,11 @@ jobs:
       - name: Setup Nodejs
         uses: actions/setup-node@v3
         with:
-          node-version: 18
-          cache: 'npm'
+          node-version: 14
       - name: install
         shell: bash
         run: 
-          npm ci
+          npm install
       - name: run unit test
         shell: bash
         run: npm run test:unit
